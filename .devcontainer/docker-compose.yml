@@ -1,0 +1,15 @@
+version: "3"
+services:
+  jupyter:
+    image: jupyter/datascience-notebook
+    container_name: jupyter
+    tty: true
+    user: root
+    ports:
+      - 8888:8888
+    volumes:
+      - ../:/ai-tuto
+    working_dir: /ai-tuto
+    environment:
+      - SHELL=/bin/bash
+      - JUPYTER_ENABLE_LAB=yes
