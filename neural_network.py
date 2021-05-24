@@ -79,7 +79,8 @@ N = 4 # 0 <= s < N # number of targets
 n = 2 # 0 <= i < n # number of inputs
 
 # t = [0] * N
-t = [0, 1, 1, 1] # target
+t = [0, 1, 1, 1] # target (OR)
+# t = [0, 0, 0, 1] # target (AND)
 # x = [[0] * n] * N
 x = [[0, 0], [0, 1], [1, 0], [1, 1]] # input
 
@@ -102,5 +103,6 @@ for e in range(0, E):
 
 print(w, b)
 for s in range(0, N):
-  print(x[s], t[s], y[s])
-print(average(v_sub(y, t)))
+  print(x[s], t[s], y[s], y[s] - t[s])
+loss = vecotr_operator(L, y, t)
+print(loss, average(loss))
