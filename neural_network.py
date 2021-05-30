@@ -62,15 +62,11 @@ def transpose(a):
 def logistic(u):
   return 1 / (1 + exp(-u))
 
-def relu(u):
-  return max(0, u)
-
 def cross_entropy(y, t):
   return -t * log(y) -(1-t) * log(1-y)
 
 L = cross_entropy # loss function
 f = logistic # activation function
-# f = relu
 
 E = 10000 # epoch
 R = 1 / 100 # learning rate

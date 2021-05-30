@@ -3,15 +3,11 @@ import numpy as np
 def logistic(u):
   return 1 / (1 + np.exp(-u))
 
-def relu(u):
-  return np.maximum(0, u)
-
 def cross_entropy(y, t):
   return np.add(-t * np.log(y), -(1-t) * np.log(1-y))
 
 L = cross_entropy
 f = logistic
-# f = relu
 
 E = 10000
 R = 1 / 100
