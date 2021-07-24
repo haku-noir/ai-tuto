@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sort -r -k 3 popular-names.txt
+sort -n -r -k 3 popular-names.txt
